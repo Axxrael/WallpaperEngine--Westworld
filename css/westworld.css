@@ -1,0 +1,258 @@
+html,body{
+    height:100%;
+    width:100%;
+    font-family:'Orbitron', 'sans-serif';
+    font-smoothing:antialiased;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+body{
+    background:#000;
+}
+
+#IconPanel{
+    display:block;
+    position:fixed;
+    left:0;
+    top:0;
+    height:calc(100% - 20px);
+    width:calc(34% - 20px);
+    margin:10px;
+    background-image:linear-gradient(225deg, transparent 5%, rgba(0,0,0,1) 5%);
+    filter:drop-shadow(0px 0px 2px #fff);
+}
+
+#MapPanel{
+    display:block;
+    position:fixed;
+    top:0;
+    right:0;
+    height:calc(50% - 20px);
+    width:calc(66% - 20px);
+    margin:10px;
+    background-image:linear-gradient(225deg, transparent 5%, rgba(0,0,0,1) 5%);
+    filter:drop-shadow(0px 0px 2px #fff);
+}
+
+#MusicPanel{
+    display:block;
+    position:absolute;
+    left:5px;
+    height:100%;
+    width:calc(50% - 5px);
+    background-image:linear-gradient(225deg, transparent 5%, rgba(0,0,0,1) 5%);
+    filter:drop-shadow(0px 0px 2px #fff);
+}
+
+#CodePanel{
+    display:block;
+    position:absolute;
+    right:0;
+    height:100%;
+    width:calc(50% - 10px);
+    margin-left:10px;
+    background-image:linear-gradient(225deg, transparent 5%, rgba(0,0,0,1) 5%);
+    filter:drop-shadow(0px 0px 2px #fff);
+}
+
+#BottomPanelAnchor{
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin:10px;
+    height:calc(50% - 15px);
+    width:calc(66% - 15px);
+}
+
+#PanelContentAnchor{
+    position:relative;
+    top:calc(10% + 15px);
+    left:5px;
+    width:calc(90% - 5px);
+    height:calc(90% - 20px);
+    border:1px solid #4F94CD;
+}
+
+#Codepad{
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    background:transparent;
+    font-size:0.66em;
+}
+
+/* Codepad styling */
+.content{
+    color:#fff;
+    white-space:pre-wrap;
+    outline:none;
+    overflow:auto;
+    line-height:1em;
+    top:1%;
+    right:1%;
+    bottom:1%;
+    left:1%;
+}
+
+.content p{
+    margin:0.1rem 0;
+}
+
+.content img{
+    float:left;
+}
+
+.content a{
+    color:#66d9ef;
+}
+
+.saveMessage{
+    position:absolute;
+    color:darkgrey;
+    bottom:1%;
+    left:1%;
+    padding:0.2rem 1rem;
+    background-color:rgba(50,200,50,0.2);
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    -moz-box-shadow:1px 1px 6px rgba(50,200,50,0.7);
+    -webkit-box-shadow:1px 1px 6px rgba(50,200,50,0.7);
+    box-shadow:1px 1px 6px rgba(50,200,50,0.7);
+    opacity:0;
+    -moz-transform:translateY(50px);
+    -ms-transform:translateY(50px);
+    -webkit-transform:translateY(50px);
+    transform:translateY(50px);
+}
+.saveMessage.visible{
+    -moz-animation:blink ease 3s;
+    -webkit-animation:blink ease 3s;
+    animation:blink ease 3s;
+}
+
+@-webkit-keyframes blink{
+    0%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+    40%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    60%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    100%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+}
+
+@-moz-keyframes blink{
+    0%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+    40%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    60%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    100%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+}
+
+@-ms-keyframes blink{
+    0%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+    40%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    60%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    100%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+}
+@keyframes blink{
+    0%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+    40%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    60%{
+        opacity:0.7;
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+    100%{
+        opacity:0;
+        -moz-transform:translateY(50px);
+        -ms-transform:translateY(50px);
+        -webkit-transform:translateY(50px);
+        transform:translateY(50px);
+    }
+}
+/* /Codepad styling */
